@@ -65,7 +65,7 @@ export default function ReservationCard({
   return (
     <div className=" bg-white rounded p-3 shadow">
       <div className="text-center border-b pb-2 font-bold">
-        <h4 className="mr-7 text-lg">Make a Reservation</h4>
+        <h4 className="mr-7 text-lg font-league">Make a Reservation</h4>
       </div>
       <div className="my-3 flex flex-col">
         <label htmlFor="">Party size</label>
@@ -109,7 +109,7 @@ export default function ReservationCard({
       </div>
       <div className="mt-5">
         <button
-          className="bg-red-600 rounded w-full px-4 text-white font-bold h-16"
+          className="bg-red-600 rounded w-full px-4 text-white font-bold font-league h-16"
           onClick={handleClick}
           disabled={loading}
         >
@@ -126,7 +126,7 @@ export default function ReservationCard({
                   href={`/reserve/${slug}?date=${day}T${time.time}&partySize=${partySize}`}
                   className="bg-red-600 cursor-pointer p-2 w-24 text-center text-white mb-3 rounded mr-3"
                 >
-                  <p className="text-sm font-bold">
+                  <p className="text-sm font-bold font-league tracking-wide">
                     {convertToDisplayTime(time.time as Time)}
                   </p>
                 </Link>

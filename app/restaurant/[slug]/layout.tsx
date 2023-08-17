@@ -9,8 +9,7 @@ export default function RestaurantLayout({
 }) {
     return (
         <main>
-            <Header name={params.slug}/>
-            <div className="flex m-auto w-2/3 justify-between items-start 0 -mt-11">
+            <div className="flex m-auto w-[90%] justify-between items-start mt-10">
                 {children}
             </div>
         </main>

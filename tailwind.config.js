@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily } =  require("tailwindcss/defaultTheme")
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -6,6 +9,13 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'sm': '400px',
+      'md': '640px',
+      'lg': '1024px',
+      'xl': '1280px',
+      'xxl': '1500px'    
+    },
     extend: {
       fontSize: {
         "2xsm": "10px",
@@ -19,6 +29,11 @@ module.exports = {
         "5xl": "40px",
         "6xl": "50px",
         "7xl": "70px",
+      },
+      fontFamily: {
+        inter: ['var(--font-inter)', ...fontFamily.sans],
+        league: ['var(--font-league-spartan)']
+
       }
     },
   },

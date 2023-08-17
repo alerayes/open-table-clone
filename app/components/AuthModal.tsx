@@ -83,9 +83,9 @@ export default function AuthModal({ isSignin }: { isSignin: boolean }) {
     <div>
       <button
         className={`${renderContent(
-          "bg-blue-400 text-white",
+          "text-black font-league hover:font-bold",
           ""
-        )} border p-1 px-4 rounded mr-3`}
+        )} text-black font-league m-2 hover:font-bold`}
         onClick={handleOpen}
       >
         {renderContent("Sign in", "Sign up")}
@@ -98,11 +98,11 @@ export default function AuthModal({ isSignin }: { isSignin: boolean }) {
       >
         <Box sx={style}>
           {loading ? (
-            <div className="py-24 px-2 h-[600px] flex justify-center">
+            <div className="py-24 px-2 h-auto flex justify-center">
               <CircularProgress />
             </div>
           ) : (
-            <div className="p-2 h-[600px]">
+            <div className="p-2 h-[450px]">
               {error ? (
                 <Alert severity="error" className="mb-4">
                   {error}

@@ -9,16 +9,16 @@ export default function SearchBar() {
 
   
   return (
-    <div className="text-left text-lg py-3 m-auto flex justify-center">
+    <div className="text-left text-lg py-3 m-auto  flex justify-center w-[3/4]">
         <input
-        className="rounded  mr-3 p-2 w-[450px]"
+        className="rounded font-league mr-3 p-2 w-[2/3]"
         type="text"
         placeholder="State, city or town"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
         />
         <button 
-        className="rounded bg-red-600 px-9 py-2 text-white"
+        className="rounded bg-red-700 px-9 py-2 text-white font-league"
         onClick={() => {
             if(location === '') return;
             router.push(`/search?city=${location}`);

@@ -76,7 +76,11 @@ export default async function Search({
     return (
       <>
         <Header />
-        <div className="flex py-4 m-auto w-2/3 justify-between items-start">
+        <h2 className="mx-10 my-8 font-bold font-league text-xl">
+          We've found {restaurants.length} restaurants based on your search:
+        </h2>
+        <div className="flex py-4 m-auto  justify-between items-start">
+
           <SearchSideBar 
             locations = {location}
             cuisines = {cuisine}

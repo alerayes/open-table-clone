@@ -27,19 +27,19 @@ export default function RestaurantCard({restaurant} : {restaurant: Restaurant}) 
     }
 
     return (
-     <div className="border-b flex pb-5 ml-4">
+     <div className="flex py-4 w-96 mb-2 mx-8 border">
             <img
               src={restaurant.main_image}
               alt=""
               className="w-44 h-36 rounded"
             />
             <div className="pl-5">
-              <h2 className="text-3xl">{restaurant.name}</h2>
+              <h2 className="text-2xl font-league font-bold">{restaurant.name}</h2>
               <div className="flex items-start">
-                <div className="flex mb-2">
+                <div className="flex mb-2 font-league">
                   <Stars reviews={restaurant.reviews}/>
                 </div>
-                <p className="ml-2 text-sm">{renderRatingText()}</p>
+                <p className="ml-2 text-md font-league">{renderRatingText()}</p>
               </div>
               <div className="mb-9">
                 <div className="font-light flex text-reg">
@@ -48,7 +48,7 @@ export default function RestaurantCard({restaurant} : {restaurant: Restaurant}) 
                   <p className="mr-4 capitalize">{restaurant.cuisine.name}</p>
                 </div>
               </div>
-              <div className="text-red-600">
+              <div className="font-league text-red-600">
                 <Link href={`restaurant/${restaurant.slug}`}>View more information</Link>
               </div>
             </div>
