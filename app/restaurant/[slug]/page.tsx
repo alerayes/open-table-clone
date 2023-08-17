@@ -1,4 +1,5 @@
 import RestaurantNavBar from "./components/RestaurantNavBar"
+import Header from "./components/Header"
 import Title from "./components/Title"
 import Rating from "./components/Rating"
 import Description from "./components/Description"
@@ -14,6 +15,7 @@ const prisma = new PrismaClient
 interface Restaurant {
     id: number
     name: string
+    main_image: string
     images: string[]
     description: string
     open_time: string
@@ -32,6 +34,7 @@ const fetchRestaurantBySlug = async (slug: string): Promise<Restaurant> => {
             name: true,
             images: true,
             description: true,
+            main_image: true,
             slug: true,
             reviews: true,
             open_time: true,
@@ -52,9 +55,10 @@ export default async function RestaurantDetails({params}: {params: {slug: string
 
     return (
         <>
+            
             <div className="bg-white w-[70%] rounded p-3 shadow">
                 <RestaurantNavBar slug={restaurant.slug}/>
-                <Title name={restaurant.name}/>
+                <Title name={restaurant.name} mainImage={restaurant.main_image}/>
                 <Rating reviews={restaurant.reviews}/>
                 <Description description={restaurant.description} />
                 <Images images={restaurant.images}/>

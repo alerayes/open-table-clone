@@ -120,7 +120,7 @@ export default function Form({
           />
           <button
             disabled={disabled || loading}
-            className="bg-red-600 w-full p-3 text-white font-bold rounded disabled:bg-gray-300"
+            className="bg-red-600 w-full p-3 text-white font-bold rounded disabled:bg-gray-300 font-league"
             onClick={handleClick}
           >
             {loading ? (

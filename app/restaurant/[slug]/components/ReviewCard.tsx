@@ -10,7 +10,7 @@ export default function ReviewCard({review}: {review: Review}) {
             <div
                 className="rounded-full bg-blue-400 w-16 h-16 flex items-center justify-center"
             >
-                <h2 className="text-white text-2xl uppercase">
+                <h2 className="text-white text-2xl uppercase font-league">
                 {review.first_name[0]}{review.last_name[0]}
                 </h2>
             </div>
@@ -23,7 +23,7 @@ export default function ReviewCard({review}: {review: Review}) {
                 </div>
             </div>
             <div className="mt-5">
-                <p className="text-lg font-light">
+                <p className="text-lg font-light font-league">
                 {review.text}
                 </p>
             </div>
