@@ -33,5 +33,5 @@ export async function middleware(req: NextRequest, res: NextResponse) {
 }
 
 export const config = {
-    matcher: ["https://rezos-git-styling-alerayes.vercel.app/api/auth/me"]
+    matcher: ["/api/auth/me"]
 }
