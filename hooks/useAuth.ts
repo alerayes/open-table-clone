@@ -23,7 +23,7 @@ const useAuth = () => {
     });
     try {
       const response = await axios.post(
-        "/api/auth/signin",
+        "https://rezos-git-styling-alerayes.vercel.app/api/auth/signin",
         {
           email,
           password,
@@ -68,7 +68,7 @@ const useAuth = () => {
     });
     try {
       const response = await axios.post(
-        "/api/auth/signup",
+        "https://rezos-git-styling-alerayes.vercel.app/api/auth/signup",
         {
           email,
           password,
