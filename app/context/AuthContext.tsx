@@ -58,7 +58,7 @@ export default function AuthContext({
         });
       }
 
-      const response = await axios.get("https://rezos-git-styling-alerayes.vercel.app/api/auth/me", {
+      const response = await axios.get("/api/auth/me", {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },
