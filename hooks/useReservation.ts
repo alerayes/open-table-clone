@@ -34,7 +34,7 @@ export default function useReservation() {
 
     try {
       const response = await axios.post(
-        `/api/restaurant/${slug}/reserve`,
+        `https://rezos-git-styling-alerayes.vercel.app/api/restaurant/${slug}/reserve`,
         {
           bookerFirstName,
           bookerLastName,
