@@ -31,8 +31,8 @@ export default async function Reservation({
     const restaurant = await fetchRestaurantBySlug(params.slug)
 
     return (
-        <div className="border-t h-screen">
-            <div className="py-9 w-3/5 m-auto">
+        <div className="border-t h-screen ">
+            <div className="py-9 flex flex-col items-center">
                 <Header 
                     image={restaurant.main_image}
                     name={restaurant.name}

@@ -215,7 +215,7 @@ export default function SearchSideBar({
                               cuisine: cuisine.name
                             }
                           }}
-                          className="font-light text-reg capitalize"
+                          className="font-light text-reg font-league capitalize"
                           key={cuisine.id}
                         >
                           {cuisine.name}
