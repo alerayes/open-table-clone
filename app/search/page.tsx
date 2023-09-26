@@ -74,32 +74,33 @@ export default async function Search({
     console.log(location)
 
     return (
-      <>
-        <Header />
-        <div className="max-w-7xl flex flex-col items-center">
-          <h2 className="mx-10 my-8 font-bold font-league text-xl">
+        <div className="">
+          <Header />
+          <h2 className="mx-4 mt-8 mb-4 font-bold font-league text-xl text-center">
             We've found {restaurants.length} restaurants based on your search:
           </h2>
-          <div className="flex py-4 m-auto  justify-between items-start">
-            <SearchSideBar
-              locations = {location}
-              cuisines = {cuisine}
-              searchParams={searchParams}
-            />
-              <div className="w-5/6">
-                {restaurants.length ? (
-                  <>
-                    {restaurants.map((restaurant) => (
-                      <RestaurantCard restaurant={restaurant} key={restaurant.id}/>
-                    ))}
-                  </>
-                ) : (
-                  ''
-                )}
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-screen-lg">
+            <div className="col-span-1 w-4/12">
+              <SearchSideBar
+                locations={location}
+                cuisines={cuisine}
+                searchParams={searchParams}
+              />
+            </div>
+            <div className="col-span-1 w-8/12">
+              {restaurants.length ? (
+                <>
+                  {restaurants.map((restaurant) => (
+                    <RestaurantCard restaurant={restaurant} key={restaurant.id} />
+                  ))}
+                </>
+              ) : (
+                ""
+              )}
+            </div>
+          </div>
         </div>
-        </div>
-      </>
+
 
     )
 }

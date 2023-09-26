@@ -62,65 +62,66 @@ export default function Form({
   };
 
   return (
-    <div className="mt-10 flex flex-wrap justify-between w-[660px]">
+    <div className="mt-10 flex flex-wrap justify-between w-full h-screen">
       {didBook ? (
         <div>
           <h1>You are all booked up</h1>
           <p>Enjoy your reservation</p>
         </div>
       ) : (
-        <>
-          <input
-            type="text"
-            className="border rounded p-3 w-80 mb-4"
-            placeholder="First name"
-            value={inputs.bookerFirstName}
-            name="bookerFirstName"
-            onChange={handleChangeInput}
-          />
-          <input
-            type="text"
-            className="border rounded p-3 w-80 mb-4"
-            value={inputs.bookerLastName}
-            placeholder="Last name"
-            name="bookerLastName"
-            onChange={handleChangeInput}
-          />
-          <input
-            type="text"
-            className="border rounded p-3 w-80 mb-4"
-            value={inputs.bookerPhone}
-            placeholder="Phone number"
-            name="bookerPhone"
-            onChange={handleChangeInput}
-          />
-          <input
-            type="text"
-            className="border rounded p-3 w-80 mb-4"
-            value={inputs.bookerEmail}
-            placeholder="Email"
-            name="bookerEmail"
-            onChange={handleChangeInput}
-          />
-          <input
-            type="text"
-            className="border rounded p-3 w-80 mb-4"
-            placeholder="Occasion (optional)"
-            value={inputs.bookerOccasion}
-            name="bookerOccasion"
-            onChange={handleChangeInput}
-          />
-          <input
-            type="text"
-            className="border rounded p-3 w-80 mb-4"
-            placeholder="Requests (optional)"
-            value={inputs.bookerRequest}
-            name="bookerRequest"
-            onChange={handleChangeInput}
-          />
+        <div className="w-full h-screen">
+          <div className="flex flex-col items-center"> 
+            <input
+              type="text"
+              className="border rounded p-3 w-80 mb-4"
+              placeholder="First name"
+              value={inputs.bookerFirstName}
+              name="bookerFirstName"
+              onChange={handleChangeInput}
+            />
+            <input
+              type="text"
+              className="border rounded p-3 w-80 mb-4"
+              value={inputs.bookerLastName}
+              placeholder="Last name"
+              name="bookerLastName"
+              onChange={handleChangeInput}
+            />
+            <input
+              type="text"
+              className="border rounded p-3 w-80 mb-4"
+              value={inputs.bookerPhone}
+              placeholder="Phone number"
+              name="bookerPhone"
+              onChange={handleChangeInput}
+            />
+            <input
+              type="text"
+              className="border rounded p-3 w-80 mb-4"
+              value={inputs.bookerEmail}
+              placeholder="Email"
+              name="bookerEmail"
+              onChange={handleChangeInput}
+            />
+            <input
+              type="text"
+              className="border rounded p-3 w-80 mb-4"
+              placeholder="Occasion (optional)"
+              value={inputs.bookerOccasion}
+              name="bookerOccasion"
+              onChange={handleChangeInput}
+            />
+            <input
+              type="text"
+              className="border rounded p-3 w-80 mb-4"
+              placeholder="Requests (optional)"
+              value={inputs.bookerRequest}
+              name="bookerRequest"
+              onChange={handleChangeInput}
+            />
           <button
             disabled={disabled || loading}
-            className="bg-red-600 w-full p-3 text-white font-bold rounded disabled:bg-gray-300 font-league"
+            className="bg-red-600 w-80 p-3 text-white font-bold rounded disabled:bg-gray-300 font-league"
             onClick={handleClick}
           >
             {loading ? (
@@ -129,12 +130,13 @@ export default function Form({
               "Complete reservation"
             )}
           </button>
-          <p className="mt-4 text-sm">
+          <p className="mt-4 text-sm w-80">
             By clicking “Complete reservation” you agree to the OpenTable Terms
             of Use and Privacy Policy. Standard text message rates may apply.
             You may opt out of receiving text messages at any time.
           </p>
-        </>
+          </div>
+        </div>
       )}
     </div>
   );
