@@ -43,7 +43,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        <main className="bg-gray-100 w-screen">
+        <main className="bg-white w-screen ">
         <AuthContext>
           <main className="max-w-screen-2xl m-auto bg-white">
             <NavBar />
